@@ -1,0 +1,85 @@
+{
+  "contenido": "¿Es un animal acuatico?",
+  "si": {
+    "contenido": "¿Tiene escamas?",
+    "si": {
+      "contenido": "¿Es peligroso?",
+      "si": {
+        "contenido": "tiburon",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "salmon",
+        "si": null,
+        "no": null
+      }
+    },
+    "no": {
+      "contenido": "¿Es un mamifero?",
+      "si": {
+        "contenido": "delfin",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "pulpo",
+        "si": null,
+        "no": null
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Puede volar?",
+    "si": {
+      "contenido": "¿Sale de noche?",
+      "si": {
+        "contenido": "Hace ruido al volar",
+        "si": {
+          "contenido": "murcielago",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Buho",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "aguila",
+        "si": null,
+        "no": null
+      }
+    },
+    "no": {
+      "contenido": "¿Vive en una casa?",
+      "si": {
+        "contenido": "¿Maulla?",
+        "si": {
+          "contenido": "gato",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "perro",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Tiene rayas?",
+        "si": {
+          "contenido": "tigre",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "elefante",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  }
+}

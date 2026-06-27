@@ -1,0 +1,77 @@
+{
+  "contenido": "¿Es de color amarillo?",
+  "si": {
+    "contenido": "¿Tiene cascara que se pela facil?",
+    "si": {
+      "contenido": "banano",
+      "si": null,
+      "no": null
+    },
+    "no": {
+      "contenido": "¿Es muy acida?",
+      "si": {
+        "contenido": "limon",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "piña",
+        "si": null,
+        "no": null
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Es roja?",
+    "si": {
+      "contenido": "¿Tiene semillas por fuera?",
+      "si": {
+        "contenido": "fresa",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Tiene cascara dura?",
+        "si": {
+          "contenido": "granada",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "manzana",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Es verde?",
+      "si": {
+        "contenido": "¿Es grande y con pepas negras?",
+        "si": {
+          "contenido": "sandia",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "uva verde",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Crece en racimos?",
+        "si": {
+          "contenido": "uva morada",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "naranja",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  }
+}
