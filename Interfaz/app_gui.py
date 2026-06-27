@@ -14,8 +14,10 @@ class AppGUI:
         self.root = root
         self.arbol = Arbol()
 
+        # Si no existe la carpeta de datos, la crea
         os.makedirs(CARPETA_DATOS, exist_ok=True)
 
+        # Canvas principal donde se dibuja todo
         self.canvas = Canvas(
             root,
             width=1200,
@@ -25,7 +27,8 @@ class AppGUI:
         )
         self.canvas.pack()
 
-        # Botón persistente — se crea una vez y se muestra/oculta según pantalla
+        # Este botón se crea una sola vez y se muestra o esconde según la pantalla
+        # Se usa .place() para que no desaparezca cuando se llama a limpiar()
         self.btn_menu = Button(
             self.root,
             text="Volver al menú",
@@ -42,6 +45,7 @@ class AppGUI:
             cursor="hand2"
         )
 
+        # Efecto hover del botón menú
         def entrar_menu(e):
             self.btn_menu.config(bg="#3A0000")
 
@@ -58,16 +62,19 @@ class AppGUI:
         self.canvas.destroy()
 
     def limpiar(self):
+        # Borra todo lo del canvas y destruye los widgets que no sean el canvas
         self.canvas.delete("all")
         for widget in self.root.pack_slaves():
             if widget is not self.canvas:
                 widget.destroy()
 
     def ajustar(self, ancho, alto):
+        # Cambia el tamaño de la ventana y del canvas
         self.root.geometry(f"{ancho}x{alto}")
         self.canvas.config(width=ancho, height=alto)
 
     def crear_boton(self, texto, accion, ancho=20):
+        # Botón reutilizable con el estilo del juego y efecto hover
         btn = Button(
             self.root,
             text=texto,
@@ -95,6 +102,7 @@ class AppGUI:
         return btn
 
     def crear_entrada(self, ancho=40):
+        # Campo de texto con el estilo oscuro del juego
         entrada = Entry(
             self.root,
             font=("Arial", 12),
@@ -110,10 +118,11 @@ class AppGUI:
     def mostrar_pantalla_inicial(self):
         self.ajustar(1200, 600)
         self.limpiar()
-        # En el menú el botón no se muestra
+        # En el menú no tiene sentido mostrar el botón de volver al menú
         self.btn_menu.place_forget()
         centro_x = 600
 
+        # Panel de fondo
         self.canvas.create_rectangle(
             275, 55, 925, 470,
             fill="#111111",
@@ -137,12 +146,14 @@ class AppGUI:
 
     # ── RF-02: CARGAR ARBOL ──
     def cargar_archivo(self):
+        # Abre el explorador de archivos para que el usuario elija un JSON
         ruta = filedialog.askopenfilename(
             title="Seleccionar archivo de arbol",
             initialdir=CARPETA_DATOS,
             filetypes=[("Archivos JSON", "*.json"), ("Todos los archivos", "*.*")]
         )
 
+        # Si el usuario cerró el diálogo sin elegir nada, no hace nada
         if not ruta:
             return
 
@@ -150,6 +161,7 @@ class AppGUI:
             self.arbol.cargar_json(ruta)
             messagebox.showinfo("Arbol cargado", "El arbol se cargo correctamente.")
         except ArchivoArbolInvalido as error:
+            # Si el archivo está mal, avisa pero sigue con el árbol que tenía
             messagebox.showerror(
                 "Error al cargar",
                 f"No se pudo cargar el archivo:\n{error}\n\nSe continuara con el arbol actual."
@@ -157,21 +169,23 @@ class AppGUI:
 
     # ── RF-04 a RF-06: PREGUNTAS ──
     def iniciar_partida(self):
+        # Reinicia el recorrido desde la raíz y muestra la primera pregunta
         self.arbol.reiniciar_partida()
         self.mostrar_pregunta()
 
     def mostrar_pregunta(self):
         self.ajustar(1200, 600)
         self.limpiar()
-        # Mostrar botón menú durante el juego
         self.btn_menu.place(x=16, y=12)
 
+        # Si el nodo actual es una hoja, ya no hay más preguntas: hay que adivinar
         if not self.arbol.es_pregunta_actual():
             self.mostrar_resultado_adivinanza()
             return
 
         centro_x = 600
 
+        # Panel donde se muestra la pregunta
         self.canvas.create_rectangle(
             200, 150, 1000, 400,
             fill="#111111",
@@ -193,10 +207,12 @@ class AppGUI:
         self.canvas.create_window(centro_x + 100, 460, window=btn_no)
 
     def responder_si(self):
+        # Avanza por la rama del Sí y muestra la siguiente pregunta
         self.arbol.responder(True)
         self.mostrar_pregunta()
 
     def responder_no(self):
+        # Avanza por la rama del No y muestra la siguiente pregunta
         self.arbol.responder(False)
         self.mostrar_pregunta()
 
@@ -204,7 +220,6 @@ class AppGUI:
     def mostrar_resultado_adivinanza(self):
         self.ajustar(1200, 600)
         self.limpiar()
-        # Mantener botón menú visible
         self.btn_menu.place(x=16, y=12)
         centro_x = 600
         respuesta = self.arbol.obtener_contenido_actual()
@@ -215,6 +230,7 @@ class AppGUI:
             outline="#630000",
             width=3
         )
+        # Muestra lo que el programa cree que el usuario estaba pensando
         self.canvas.create_text(
             centro_x, 260,
             text=f"¿Estabas pensando en: {respuesta}?",
@@ -223,6 +239,7 @@ class AppGUI:
             width=700
         )
 
+        # Si el usuario dice que sí, el programa ganó; si dice que no, hay que aprender
         btn_si = self.crear_boton("Si", self.confirmar_acierto, ancho=12)
         btn_no = self.crear_boton("No", self.mostrar_formulario_aprendizaje, ancho=12)
 
@@ -232,7 +249,7 @@ class AppGUI:
     def confirmar_acierto(self):
         self.ajustar(1200, 600)
         self.limpiar()
-        # Ya hay "Volver al inicio" en esta pantalla, no hace falta el botón persistente
+        # Esta pantalla ya tiene su propio botón de volver, no se necesita el persistente
         self.btn_menu.place_forget()
         centro_x = 600
 
@@ -259,7 +276,6 @@ class AppGUI:
     def mostrar_formulario_aprendizaje(self):
         self.ajustar(1200, 600)
         self.limpiar()
-        # Mantener botón menú visible
         self.btn_menu.place(x=16, y=12)
         centro_x = 600
 
@@ -276,6 +292,7 @@ class AppGUI:
             font=("Impact", 26)
         )
 
+        # Campo 1: lo que el usuario estaba pensando
         self.canvas.create_text(
             centro_x, 170,
             text="¿En que estabas pensando?",
@@ -285,6 +302,7 @@ class AppGUI:
         entrada_respuesta = self.crear_entrada()
         self.canvas.create_window(centro_x, 200, window=entrada_respuesta)
 
+        # Campo 2: pregunta que diferencie la respuesta correcta de la que el programa dijo
         self.canvas.create_text(
             centro_x, 250,
             text=f"Escribe una pregunta de si o no que diferencie tu respuesta\nde '{self.arbol.obtener_contenido_actual()}':",
@@ -295,6 +313,7 @@ class AppGUI:
         entrada_pregunta = self.crear_entrada()
         self.canvas.create_window(centro_x, 300, window=entrada_pregunta)
 
+        # Campo 3: si la respuesta a esa pregunta es Sí o No para lo que el usuario pensó
         self.canvas.create_text(
             centro_x, 350,
             text="La respuesta correcta a tu pregunta es:",
@@ -330,6 +349,7 @@ class AppGUI:
         respuesta_correcta = respuesta_correcta.strip()
         nueva_pregunta = nueva_pregunta.strip()
 
+        # No permite guardar si algún campo quedó vacío
         if not respuesta_correcta or not nueva_pregunta:
             messagebox.showerror(
                 "Datos incompletos",
@@ -337,8 +357,10 @@ class AppGUI:
             )
             return
 
+        # Modifica el árbol con lo que aprendió
         self.arbol.aprender(respuesta_correcta, nueva_pregunta, respuesta_para_si)
 
+        # Guarda en el mismo archivo que se cargó, o en el default si no se cargó ninguno
         ruta_destino = self.arbol.ruta_archivo or ARCHIVO_DEFAULT
         try:
             self.arbol.guardar_json(ruta_destino)
