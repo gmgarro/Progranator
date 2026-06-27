@@ -1,0 +1,133 @@
+{
+  "contenido": "¿Esta en Europa?",
+  "si": {
+    "contenido": "¿Tiene salida al mar Mediterraneo?",
+    "si": {
+      "contenido": "¿Es famoso por su pasta y pizza?",
+      "si": {
+        "contenido": "Italia",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Tiene la Torre Eiffel?",
+        "si": {
+          "contenido": "Francia",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "España",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Es una isla?",
+      "si": {
+        "contenido": "Reino Unido",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Es conocido por sus tulipanes y molinos de viento?",
+        "si": {
+          "contenido": "Paises Bajos",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Alemania",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Esta en America?",
+    "si": {
+      "contenido": "¿Esta en America del Norte?",
+      "si": {
+        "contenido": "¿Tiene mas de 300 millones de habitantes?",
+        "si": {
+          "contenido": "Estados Unidos",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Canada",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Es el pais mas grande de America del Sur?",
+        "si": {
+          "contenido": "Brasil",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Esta en Centroamerica?",
+          "si": {
+            "contenido": "Costa Rica",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Argentina",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Esta en Asia?",
+      "si": {
+        "contenido": "¿Es famoso por el anime y la tecnologia?",
+        "si": {
+          "contenido": "Japon",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Tiene la muralla mas larga del mundo?",
+          "si": {
+            "contenido": "China",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "India",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Esta en Africa?",
+        "si": {
+          "contenido": "¿Esta al norte del continente?",
+          "si": {
+            "contenido": "Egipto",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Sudafrica",
+            "si": null,
+            "no": null
+          }
+        },
+        "no": {
+          "contenido": "Australia",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "contenido": "¿Es un mamifero?",
+  "si": {
+    "contenido": "¿Vive en el agua?",
+    "si": {
+      "contenido": "¿Es el animal mas grande del mundo?",
+      "si": {
+        "contenido": "ballena azul",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Es conocido por su inteligencia?",
+        "si": {
+          "contenido": "delfin",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "foca",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Es carnivoro?",
+      "si": {
+        "contenido": "¿Vive en la selva?",
+        "si": {
+          "contenido": "¿Tiene manchas?",
+          "si": {
+            "contenido": "leopardo",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "jaguar",
+            "si": null,
+            "no": null
+          }
+        },
+        "no": {
+          "contenido": "¿Es el rey de la selva?",
+          "si": {
+            "contenido": "leon",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "lobo",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Es el animal terrestre mas grande?",
+        "si": {
+          "contenido": "elefante",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Tiene cuello muy largo?",
+          "si": {
+            "contenido": "jirafa",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "caballo",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Puede volar?",
+    "si": {
+      "contenido": "¿Es un insecto?",
+      "si": {
+        "contenido": "¿Tiene alas de colores?",
+        "si": {
+          "contenido": "mariposa",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "abeja",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Es el ave mas rapida del mundo?",
+        "si": {
+          "contenido": "halcon peregrino",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es conocido por repetir palabras?",
+          "si": {
+            "contenido": "loro",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "aguila",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Vive en el agua?",
+      "si": {
+        "contenido": "¿Tiene escamas?",
+        "si": {
+          "contenido": "¿Es peligroso para los humanos?",
+          "si": {
+            "contenido": "tiburon",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "salmon",
+            "si": null,
+            "no": null
+          }
+        },
+        "no": {
+          "contenido": "pulpo",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Tiene caparazon?",
+        "si": {
+          "contenido": "tortuga",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es un reptil largo y sin patas?",
+          "si": {
+            "contenido": "serpiente",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "iguana",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "contenido": "¿Esta en la Gran Area Metropolitana?",
+  "si": {
+    "contenido": "¿Es la capital del pais?",
+    "si": {
+      "contenido": "¿Es famoso por el Mercado Central?",
+      "si": {
+        "contenido": "San Jose",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "Cartago",
+        "si": null,
+        "no": null
+      }
+    },
+    "no": {
+      "contenido": "¿Es conocido por sus flores y fincas de fresas?",
+      "si": {
+        "contenido": "Grecia",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "Es parte de curridabat",
+        "si": {
+          "contenido": "Guayabos",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Alajuela",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Tiene playa?",
+    "si": {
+      "contenido": "¿Esta en el Pacifico?",
+      "si": {
+        "contenido": "¿Es famoso por el surf?",
+        "si": {
+          "contenido": "Jaco",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Esta en Guanacaste?",
+          "si": {
+            "contenido": "Tamarindo",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Manuel Antonio",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Es el puerto mas importante del Caribe?",
+        "si": {
+          "contenido": "Puerto Limon",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Cahuita",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Tiene un volcan activo?",
+      "si": {
+        "contenido": "¿Es el volcan mas visitado del pais?",
+        "si": {
+          "contenido": "Volcan Poas",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Esta cerca de La Fortuna?",
+          "si": {
+            "contenido": "Volcan Arenal",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Volcan Irazu",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Es famoso por los quesos y la produccion lechera?",
+        "si": {
+          "contenido": "Zarcero",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Monteverde",
+          "si": null,
+          "no": null
+        }
+      }
+    }
+  }
+}

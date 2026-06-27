@@ -1,0 +1,133 @@
+{
+  "contenido": "¿Es una fruta tropical?",
+  "si": {
+    "contenido": "¿Tiene cascara dura o espinosa?",
+    "si": {
+      "contenido": "¿Por dentro es amarillo y dulce?",
+      "si": {
+        "contenido": "pina",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Tiene una semilla grande en el centro?",
+        "si": {
+          "contenido": "mango",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "coco",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Es alargada y amarilla?",
+      "si": {
+        "contenido": "banano",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Es roja por dentro?",
+        "si": {
+          "contenido": "sandia",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es verde por fuera y cremosa por dentro?",
+          "si": {
+            "contenido": "aguacate",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "papaya",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Es citrica?",
+    "si": {
+      "contenido": "¿Es naranja por fuera?",
+      "si": {
+        "contenido": "¿Es grande y amarga?",
+        "si": {
+          "contenido": "toronja",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "naranja",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Es verde y muy acida?",
+        "si": {
+          "contenido": "limon",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "mandarina",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Crece en arboles de clima frio?",
+      "si": {
+        "contenido": "¿Es roja o verde y crujiente?",
+        "si": {
+          "contenido": "manzana",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es alargada y amarilla cuando madura?",
+          "si": {
+            "contenido": "pera",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "durazno",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Es pequena y roja?",
+        "si": {
+          "contenido": "fresa",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es morada y crece en racimos?",
+          "si": {
+            "contenido": "uva",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "kiwi",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    }
+  }
+}

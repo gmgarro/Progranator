@@ -1,0 +1,117 @@
+{
+  "contenido": "¿Es un juego de disparos?",
+  "si": {
+    "contenido": "¿Es en primera persona?",
+    "si": {
+      "contenido": "¿Es de ciencia ficcion?",
+      "si": {
+        "contenido": "Halo",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "¿Es moderno y multijugador?",
+        "si": {
+          "contenido": "Call of Duty",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Counter-Strike",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Tiene personajes con habilidades especiales?",
+      "si": {
+        "contenido": "Overwatch",
+        "si": null,
+        "no": null
+      },
+      "no": {
+        "contenido": "Fortnite",
+        "si": null,
+        "no": null
+      }
+    }
+  },
+  "no": {
+    "contenido": "¿Es un juego de rol?",
+    "si": {
+      "contenido": "¿Es de mundo abierto?",
+      "si": {
+        "contenido": "¿Tiene dragones?",
+        "si": {
+          "contenido": "The Elder Scrolls V Skyrim",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "The Witcher 3",
+          "si": null,
+          "no": null
+        }
+      },
+      "no": {
+        "contenido": "¿Es por turnos?",
+        "si": {
+          "contenido": "Pokemon",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "Final Fantasy VII",
+          "si": null,
+          "no": null
+        }
+      }
+    },
+    "no": {
+      "contenido": "¿Es un juego de plataformas?",
+      "si": {
+        "contenido": "¿El personaje principal es una fontanero?",
+        "si": {
+          "contenido": "Super Mario Bros",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es un erizo?",
+          "si": {
+            "contenido": "Sonic",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Hollow Knight",
+            "si": null,
+            "no": null
+          }
+        }
+      },
+      "no": {
+        "contenido": "¿Se juega en un campo de batalla con otros jugadores?",
+        "si": {
+          "contenido": "League of Legends",
+          "si": null,
+          "no": null
+        },
+        "no": {
+          "contenido": "¿Es de construccion y supervivencia?",
+          "si": {
+            "contenido": "Minecraft",
+            "si": null,
+            "no": null
+          },
+          "no": {
+            "contenido": "Tetris",
+            "si": null,
+            "no": null
+          }
+        }
+      }
+    }
+  }
+}
